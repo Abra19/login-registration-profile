@@ -1,15 +1,32 @@
-# login-registration-profile
-SPA with login - registration - user profile (React + Typescript)
+### Maintainability, tests and linter status:
+[![Maintainability](https://api.codeclimate.com/v1/badges/b20eb909fed645bb591d/maintainability)](https://codeclimate.com/github/Abra19/login-registration-profile/maintainability)
+[![Node CI](https://github.com/Abra19/drag-and-drop-calculator/actions/workflows/nodeci.yml/badge.svg)](https://github.com/Abra19/drag-and-drop-calculator/actions/workflows/nodeci.yml)
 
-## Запуск API
+### Project Description:
+SPA with login - registration - User profile
 
-1. Убедитесь, что у вас стоит последняя node LTS версия. Ссылка для скачивания: https://nodejs.org/en/
-2. Перейдите в папку `backend`
-3. Установите зависимости api - `npm install`
-4. Запустите api - `node app.js`. По умолчанию api запускается по адресу `http://localhost:8080`
+### Tech Stack:
+React / React Hooks / React Router
+Redux / Redux Toolkit
+Typescript
+Ant Design
+Axios
+i18next
+Jest
+Cypress
 
-В результате в консоли получаем output:
+### To get started
+
+1. Clone git repo: git clone git@github.com:Abra19/login-registration-profile.git
+2. Install packages: `make install`
+3. Start server: `make start-backend`
+
+  output:
 
 ```
-Сервер с API стартовал по адресу http://localhost:8080 
+Server started at http://localhost:8080 
 ```
+
+4. Start app: `make start`
+
+### [Try the application](https://drag-and-drop-calculator-delta.vercel.app)
