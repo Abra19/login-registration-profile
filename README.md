@@ -1,6 +1,6 @@
 ### Maintainability, tests and linter status:
 [![Maintainability](https://api.codeclimate.com/v1/badges/b20eb909fed645bb591d/maintainability)](https://codeclimate.com/github/Abra19/login-registration-profile/maintainability)
-[![Node CI](https://github.com/Abra19/drag-and-drop-calculator/actions/workflows/nodeci.yml/badge.svg)](https://github.com/Abra19/drag-and-drop-calculator/actions/workflows/nodeci.yml)
+[![Node CI](https://github.com/Abra19/login-registration-profile/actions/workflows/nodeci.yml/badge.svg)](https://github.com/Abra19/login-registration-profile/actions/workflows/nodeci.yml)
 
 ### Project Description:
 SPA with login - registration - User profile
@@ -19,9 +19,7 @@ Cypress
 
 1. Clone git repo: git clone git@github.com:Abra19/login-registration-profile.git
 2. Install packages: `make install`
-3. Start server: `make start-backend`
-
-  output:
+3. Start server: `make start-backend` -----> output:
 
 ```
 Server started at http://localhost:8080 
@@ -29,4 +27,4 @@ Server started at http://localhost:8080
 
 4. Start app: `make start`
 
-### [Try the application](https://drag-and-drop-calculator-delta.vercel.app)
+### [Try the application](https://login-registration-profile.vercel.app/)
