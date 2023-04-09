@@ -8,7 +8,7 @@ build:
 	npm run build
 
 lint:
-	npx eslint .
+	npx eslint --ignore-path .gitignore --ext .js,.ts,.tsx .
 
 test:
 	npm test -s

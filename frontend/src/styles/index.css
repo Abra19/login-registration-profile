@@ -1,0 +1,30 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+@font-face {
+  font-family: "Playfair Display";
+  src:
+    url("../assets/fonts/Playfair/PlayfairDisplay-VariableFont_wght.woff2") format("woff2"),
+    url("../assets/fonts/Playfair/PlayfairDisplay-Italic-VariableFont_wght.woff") format("woff");
+ }
+
+.mainContainer {
+  margin: 0 auto;
+  min-width: 400px;
+}
+
+.navPannel {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  color:darkblue;
+  text-shadow: blue 1px 0 1px;
+  list-style: none;
+}
+
+.linkStyle {
+  text-decoration: none;
+}
+
+.linkStyle:hover, .linkStyle:visited {
+  text-shadow: none;
+}
