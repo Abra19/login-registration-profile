@@ -1,0 +1,24 @@
+{
+  "name": "login-registration-profile",
+  "version": "1.0.0",
+  "description": "react-typescript app with login, registartion and user profile",
+  "main": "./frontend/src/index.tsx",
+  "scripts": {
+    "build": "npm run build --prefix frontend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abra19/login-registration-profile.git"
+  },
+  "keywords": [
+    "login",
+    "registration",
+    "profile"
+  ],
+  "author": "Elena Abrarova",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Abra19/login-registration-profile/issues"
+  },
+  "homepage": "https://github.com/Abra19/login-registration-profile#readme"
+}
