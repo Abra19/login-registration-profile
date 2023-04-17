@@ -3,17 +3,15 @@
 [![Node CI](https://github.com/Abra19/login-registration-profile/actions/workflows/nodeci.yml/badge.svg)](https://github.com/Abra19/login-registration-profile/actions/workflows/nodeci.yml)
 
 ### Project Description:
-SPA with login - registration - User profile
+SPA with Login - Registration - User profile
 
 ### Tech Stack:
-React / React Hooks / React Router
-Redux / Redux Toolkit
-Typescript
-Ant Design
-Axios
-i18next
-Jest
-Cypress
+* React / React Hooks / React Router
+* Redux / Redux Toolkit
+* Typescript
+* Ant Design
+* Axios
+* i18next
 
 ### To get started
 

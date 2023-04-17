@@ -1,5 +1,11 @@
+install-backend:
+	make -C backend install
+
+install-frontend:
+	make -C frontend install
+
 install:
-	make -C frontend install & make -C backend install
+	make install-backend & make install-frontend
 
 lint:
 	make -C frontend lint
