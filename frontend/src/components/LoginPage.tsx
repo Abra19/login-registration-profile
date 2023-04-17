@@ -1,26 +1,20 @@
 import axios from 'axios';
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import { useFormik } from 'formik';
-import { Container, Row, Col } from 'react-bootstrap'; ///
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 import { CardsValuesProps } from '../types';
-import useAuth from '../hooks/auth.js';
+import useAuth from '../hooks/auth';
 import routes from '../routes.js';
 import { loginSchema } from '../validation/validationSchema';
-import CardElement from './CardElement';
+import LoginCard from './LoginCard';
 
 const LoginPage = () => {
-  const inputNameRef = useRef<HTMLInputElement>(null!);
   const [authFailed, setAuthFailed] = useState(false);
   const auth = useAuth();
   const navigate = useNavigate();
   const { t } = useTranslation();
-
-  useEffect(() => {
-    inputNameRef.current.focus();
-  }, []);
 
   const formik = useFormik({
     initialValues: {
@@ -43,7 +37,6 @@ const LoginPage = () => {
         if (err.response.status === 401) {
           setAuthFailed(true);
           navigate(routes.loginPagePath());
-          inputNameRef.current.select();
         }
       }
     },
@@ -56,20 +49,17 @@ const LoginPage = () => {
     placeholderPassword: t('placeholders.password'),
     noAccount: t('noAccount'),
     registration: t('registration'),
-    error: t('errors.invalidFeedback'),
+    error: t('errors.required'),
     authFailed,
-    inputNameRef,
     path: routes.registerPagePath(),
   };
 
   return (
-    <Container fluid className="h-100">
-      <Row className="justify-content-center align-content-center h-100">
-        <Col xs={12} md={8} xxl={6}>
-          <CardElement values={values} />
-        </Col>
-      </Row>
-    </Container>
+    <div className="h-100">
+      <div className="justify-content-center align-content-center h-100">
+        <LoginCard values={values} />
+      </div>
+    </div>
   );
 };
 

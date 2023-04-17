@@ -3,8 +3,19 @@
 @font-face {
   font-family: "Playfair Display";
   src:
-    url("../assets/fonts/Playfair/PlayfairDisplay-VariableFont_wght.woff2") format("woff2"),
-    url("../assets/fonts/Playfair/PlayfairDisplay-Italic-VariableFont_wght.woff") format("woff");
+    url("../assets/fonts/Playfair/PlayfairDisplay-Regular.woff2") format("woff2"),
+    url("../assets/fonts/Playfair/PlayfairDisplay-Regular.woff") format("woff");
+ }
+
+ @font-face {
+  font-family: "Playfair Display Bold";
+  src:
+    url("../assets/fonts/Playfair/PlayfairDisplay-Bold.woff2") format("woff2"),
+    url("../assets/fonts/Playfair/PlayfairDisplay-Bold.woff") format("woff");
+ }
+
+ body {
+  background-color:lightgrey;
  }
 
 .mainContainer {
@@ -13,18 +24,71 @@
 }
 
 .navPannel {
-  font-family: 'Playfair Display', serif;
-  font-size: 20px;
-  text-transform: uppercase;
-  color:darkblue;
-  text-shadow: blue 1px 0 1px;
   list-style: none;
+  background-color: aliceblue;
 }
 
 .linkStyle {
   text-decoration: none;
+  font-family: 'Playfair Display Bold', serif;
+  font-size: 20px;
+  color:black;
+  text-shadow:gray 1px 0 1px;
+  text-transform: uppercase;
 }
 
-.linkStyle:hover, .linkStyle:visited {
+.linkStyle:hover {
+  color: darkgray;
   text-shadow: none;
 }
+
+.cardWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardContainer {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: aliceblue;
+  margin: 0 auto;
+  margin-top: 50px;
+  border-radius: 0.375rem 0.375rem 0 0;
+}
+
+.cardStyle {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(2, 20% 80%);
+  width: 100%;
+  height: 100%;
+  font-family: 'Playfair Display Bold', serif;
+  text-align: center;
+  border-radius: 0 0.375rem 0 0;
+}
+
+.imgContainer {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.375rem 0 0 0;  
+}
+
+.contentStyle {
+  text-align: 'left';
+  font-family: 'Playfair Display, serif';
+  width: 100%;
+}
+
+.loginForm {
+ margin-top: 30px;
+}
+
+
+.footer {
+  width: 80%;
+  background-color:azure;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  font-family: 'Playfair Display Bold', serif;
+};

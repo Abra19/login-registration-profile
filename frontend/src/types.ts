@@ -19,7 +19,6 @@ export type CardsValuesProps = {
   registration: string;
   error: string;
   authFailed: boolean;
-  inputNameRef: any;
   path: string;
 }
 
