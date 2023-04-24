@@ -1,5 +1,5 @@
 install:
-	npm ci
+	npm install
 
 start-server:
 	node app.js
