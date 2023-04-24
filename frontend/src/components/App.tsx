@@ -16,7 +16,7 @@ import AuthProvider from '../contexts/AurhProvider';
 
 import AboutPage from './AboutPage';
 import LoginPage from './LoginPage';
-import RegisterPage from './RegisterPage';
+import SignupPage from './SignupPage';
 import NotFoundPage from './NotFoundPage';
 
 const PrivateRoute = ({ children }: ChildrenProps): any => {
@@ -63,7 +63,7 @@ const App = () => {
             />
             <Route path={routes.loginPagePath()} element={<LoginPage />} />
             <Route path={routes.aboutPagePath()} element={<AboutPage />} />
-            <Route path={routes.registerPagePath()} element={<RegisterPage />} />
+            <Route path={routes.signupPagePath()} element={<SignupPage />} />
             <Route path={routes.notFoundPath()} element={<NotFoundPage />} />
           </Routes>
         </Router>

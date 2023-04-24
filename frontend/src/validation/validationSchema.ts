@@ -15,7 +15,7 @@ const registrationSchema = (
     .min(3, nameMsg)
     .max(20, nameMsg)
     .required(requiredMsg),
-  password: yup.string().trim().min(6, passwordMsg).required(requiredMsg),
+  password: yup.string().trim().min(4, passwordMsg).required(requiredMsg),
   passwordConfirmation: yup.string().trim().oneOf([yup.ref('password')], equalMsg).required(requiredMsg),
 });
 

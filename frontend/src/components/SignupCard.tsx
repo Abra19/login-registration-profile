@@ -6,30 +6,32 @@ import {
   Input,
 } from 'antd';
 
-import loginImg from '../assets/loginImg.jpeg';
-import { CardsProps } from '../types';
+import signupImg from '../assets/signupImg.jpeg';
+import { SignupProps } from '../types';
 
-const CardElement = ({ values }: CardsProps) => {
+const SignupCard = ({ values }: SignupProps) => {
   const {
     formik,
     title,
     buttonName,
     placeholderName,
     placeholderPassword,
-    noAccount,
-    registration,
-    errorAuth,
-    authFailed,
+    placeholderPasswordConfirmation,
+    userExists,
+    makedRegistration,
+    enter,
+    registrationFailed,
     path,
   } = values;
 
   const validateStatusUser = formik.errors.username ? 'error' : 'success';
   const validateStatusPassword = formik.errors.password ? 'error' : 'success';
+  const validateStatusPasswordConfirmation = formik.errors.passwordConfirmation ? 'error' : 'success';
 
   return (
     <div className="cardWrapper">
       <div className="cardContainer shadow-sm">
-        <img src={loginImg} className="imgContainer" alt={title} />
+        <img src={signupImg} className="imgContainer" alt={title} />
         <Card title={title} className="cardStyle" bordered={false}>
           <Form
             name="basic"
@@ -66,22 +68,36 @@ const CardElement = ({ values }: CardsProps) => {
               />
             </Form.Item>
 
+            <Form.Item
+              name="passwordConfirmation"
+              className="mb-5"
+              help={formik.errors.passwordConfirmation}
+              validateStatus={validateStatusPasswordConfirmation}
+            >
+              <Input.Password
+                name="passwordConfirmation"
+                placeholder={placeholderPasswordConfirmation}
+                value={formik.values.passwordConfirmation}
+                onChange={formik.handleChange}
+              />
+            </Form.Item>
+
             <Form.Item>
               <Button type="primary" htmlType="submit">
                 {buttonName}
               </Button>
             </Form.Item>
-            {authFailed && <Form.Item className="error">{errorAuth}</Form.Item>}
+            {registrationFailed && <Form.Item className="error">{userExists}</Form.Item>}
           </Form>
         </Card>
       </div>
       <div className="footer p-4">
         <div className="text-center">
           <span className="me-5">
-            {noAccount}
+            {makedRegistration}
           </span>
           <Button htmlType="button" type="link">
-            <Link to={path}>{registration}</Link>
+            <Link to={path}>{enter}</Link>
           </Button>
         </div>
       </div>
@@ -89,4 +105,4 @@ const CardElement = ({ values }: CardsProps) => {
   );
 };
 
-export default CardElement;
+export default SignupCard;

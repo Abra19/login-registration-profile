@@ -44,14 +44,15 @@ const LoginPage = () => {
 
   const values: CardsValuesProps = {
     formik,
-    title: t('entry'),
+    title: t('loginTitle'),
+    buttonName: t('entry'),
     placeholderName: t('placeholders.login'),
     placeholderPassword: t('placeholders.password'),
     noAccount: t('noAccount'),
     registration: t('registration'),
-    error: t('errors.required'),
+    errorAuth: t('errors.auth'),
     authFailed,
-    path: routes.registerPagePath(),
+    path: routes.signupPagePath(),
   };
 
   return (

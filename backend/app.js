@@ -25,7 +25,7 @@ let users = [
   {
     id: 1,
     username: "test",
-    password: "123",
+    password: "1234",
     avatar: `https://picsum.photos/id/1/200/200`,
     about:
       "Я тестовый пользователь номер один. Я никогда не пропадаю между запусками api!"
@@ -34,7 +34,7 @@ let users = [
     id: 2,
     username: "test2",
     avatar: `https://picsum.photos/id/2/200/200`,
-    password: "234",
+    password: "2345",
     about:
       "Я тестовый пользователь номер два. Я так же никогда не пропадаю между запусками api!"
   }
@@ -110,7 +110,7 @@ app.post("/register", (req, res) => {
     username,
     password,
     avatar: `https://picsum.photos/id/${id}/200/200`,
-    about: null
+    about: `Я новый пользователь номер ${id}. Я пропадаю между запусками api!`,
   });
   res.json({
     message: "Пользователь успешно зарегистрирован"

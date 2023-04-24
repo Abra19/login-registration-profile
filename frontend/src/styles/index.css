@@ -45,6 +45,9 @@
 .cardWrapper {
   display: flex;
   flex-direction: column;
+  max-width: 1200px;
+  min-width: 750px;
+  margin: 0 auto;
 }
 
 .cardContainer {
@@ -84,6 +87,9 @@
  margin-top: 30px;
 }
 
+.error {
+  color: red;
+}
 
 .footer {
   width: 80%;
@@ -92,3 +98,7 @@
   margin-bottom: 50px;
   font-family: 'Playfair Display Bold', serif;
 };
+
+.avatar {
+  object-fit: cover;
+}
