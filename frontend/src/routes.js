@@ -1,4 +1,4 @@
-const root = '';
+const root = process.env.URL || '';
 
 export default {
   aboutPagePath: () => [root, ''].join('/'),
