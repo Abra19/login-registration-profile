@@ -40,6 +40,8 @@ const AuthButton = () => {
 
 const App = () => {
   const { t } = useTranslation();
+  console.log(process.env.APIURL);
+  console.log(routes.loginPagePath());
   return (
     <AuthProvider>
       <div className="d-flex flex-column h-100 mainContainer">

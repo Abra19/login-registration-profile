@@ -1,10 +1,10 @@
-import axios from 'axios';
 import { useState } from 'react';
 import { useFormik } from 'formik';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
-import { SignupValuesProps } from '../types'; ///
+import { SignupValuesProps } from '../types';
+import axios from '../axios';
 import useAuth from '../hooks/auth';
 import routes from '../routes.js';
 import { registrationSchema } from '../validation/validationSchema';

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Card } from 'antd';
-import axios from 'axios';
+import axios from '../axios';
 import routes from '../routes';
 
 const getAuthHeader = () => {

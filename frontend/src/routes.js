@@ -1,4 +1,4 @@
-const root = process.env.APIURL || '';
+const root = '';
 
 export default {
   aboutPagePath: () => [root, ''].join('/'),

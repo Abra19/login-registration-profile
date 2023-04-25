@@ -1,10 +1,10 @@
-import axios from 'axios';
 import { useState } from 'react';
 import { useFormik } from 'formik';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 import { CardsValuesProps } from '../types';
+import axios from '../axios';
 import useAuth from '../hooks/auth';
 import routes from '../routes.js';
 import { loginSchema } from '../validation/validationSchema';
@@ -24,7 +24,6 @@ const LoginPage = () => {
     validationSchema: loginSchema(t('errors.required')),
     onSubmit: async (values) => {
       try {
-        console.log(routes.loginPagePath());
         const res = await axios.post(routes.loginPagePath(), {
           username: values.username,
           password: values.password,
