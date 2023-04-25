@@ -40,7 +40,7 @@ const AuthButton = () => {
 
 const App = () => {
   const { t } = useTranslation();
-  console.log(process.env.APIURL);
+  console.log(process.env);
   console.log(routes.loginPagePath());
   return (
     <AuthProvider>
