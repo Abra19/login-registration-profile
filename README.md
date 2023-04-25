@@ -7,7 +7,6 @@ SPA with Login - Registration - User profile
 
 ### Tech Stack:
 * React / React Hooks / React Router
-* Redux / Redux Toolkit
 * Typescript
 * Ant Design
 * Axios
@@ -17,12 +16,7 @@ SPA with Login - Registration - User profile
 
 1. Clone git repo: git clone git@github.com:Abra19/login-registration-profile.git
 2. Install packages: `make install`
-3. Start server: `make start-backend` -----> output:
-
-```
-Server started at http://localhost:8080 
-```
-
+3. Start server: `make start-backend`
 4. Start app: `make start`
 
-### [Try the application](https://login-registration-profile.vercel.app/)
+### [Try the application](https://login-registration-profile.onrender.com/)
