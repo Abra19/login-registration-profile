@@ -130,7 +130,7 @@ app.use((error, req, res, next) => {
 });
 
 //дефолтный порт приложения
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
   // eslint-disable-next-line
   console.log(`Server started at http://localhost:${PORT}`);
