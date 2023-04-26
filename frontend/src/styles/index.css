@@ -20,7 +20,6 @@
 
 .mainContainer {
   margin: 0 auto;
-  min-width: 400px;
 }
 
 .navPannel {
@@ -46,7 +45,6 @@
   display: flex;
   flex-direction: column;
   max-width: 1200px;
-  min-width: 750px;
   margin: 0 auto;
 }
 
@@ -69,6 +67,7 @@
   font-family: 'Playfair Display Bold', serif;
   text-align: center;
   border-radius: 0 0.375rem 0 0;
+  
 }
 
 .imgContainer {
@@ -91,6 +90,10 @@
   color: red;
 }
 
+.errorFooter {
+  height: 50px;
+}
+
 .footer {
   width: 80%;
   background-color:azure;
@@ -101,4 +104,28 @@
 
 .avatar {
   object-fit: cover;
+}
+
+@media (max-width: 750px) {
+  .imgContainer {
+    display: none;
+  }
+
+  .cardContainer {
+    width: 90%;
+    grid-template-columns: repeat(1, 1fr);
+
+  }
+
+  .cardStyle {
+    overflow: hidden;
+  }
+
+  .linkStyle {
+    font-size: 14px;
+  }
+
+  .footer  {
+    width: 90%;
+  }
 }

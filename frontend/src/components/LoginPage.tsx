@@ -20,6 +20,7 @@ const LoginPage = () => {
     initialValues: {
       username: '',
       password: '',
+      error: '',
     },
     validationSchema: loginSchema(t('errors.required')),
     onSubmit: async (values) => {
@@ -34,9 +35,15 @@ const LoginPage = () => {
         navigate(routes.aboutPagePath());
       } catch (err: any) {
         formik.setSubmitting(false);
-        if (err.response.status === 401) {
-          setAuthFailed(true);
-          navigate(routes.loginPagePath());
+        if (err.isAxiosError) {
+          if (err.response.status === 401) {
+            setAuthFailed(true);
+            navigate(routes.loginPagePath());
+          } else {
+            formik.errors.error = t('errors.network') || '';
+          }
+        } else {
+          formik.errors.error = err.message || '';
         }
       }
     },

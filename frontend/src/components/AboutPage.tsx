@@ -33,8 +33,11 @@ const AboutPage = () => {
       cover={<img alt="avatar" src={datas.avatar} />}
       style={{
         width: '30%',
-        minWidth: '300px',
-        margin: '30px auto',
+        minWidth: '250px',
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
         backgroundColor: 'aliceblue',
       }}
     >

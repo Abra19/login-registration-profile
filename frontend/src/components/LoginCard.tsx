@@ -71,7 +71,10 @@ const CardElement = ({ values }: CardsProps) => {
                 {buttonName}
               </Button>
             </Form.Item>
-            {authFailed && <Form.Item className="error">{errorAuth}</Form.Item>}
+            <div className="errorFooter">
+              {authFailed && <Form.Item className="error">{errorAuth}</Form.Item>}
+              {!formik.isSubmitting && formik.errors.error && <div className="error">{formik.errors.error}</div>}
+            </div>
           </Form>
         </Card>
       </div>

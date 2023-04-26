@@ -87,7 +87,10 @@ const SignupCard = ({ values }: SignupProps) => {
                 {buttonName}
               </Button>
             </Form.Item>
-            {registrationFailed && <Form.Item className="error">{userExists}</Form.Item>}
+            <div className="errorFooter">
+              {registrationFailed && <Form.Item className="error">{userExists}</Form.Item>}
+              {!formik.isSubmitting && formik.errors.error && <div className="error">{formik.errors.error}</div>}
+            </div>
           </Form>
         </Card>
       </div>

@@ -21,6 +21,7 @@ const SignupPage = () => {
       username: '',
       password: '',
       passwordConfirmation: '',
+      error: '',
     },
     validationSchema: registrationSchema(t('registrationRules.name'), t('registrationRules.password'), t('registrationRules.passwordEquality'), t('errors.required')),
     onSubmit: async (values) => {
@@ -39,9 +40,15 @@ const SignupPage = () => {
         navigate(routes.aboutPagePath());
       } catch (err: any) {
         formik.setSubmitting(false);
-        if (err.response.status === 400) {
-          setRegistrationFailed(true);
-          navigate(routes.signupPagePath());
+        if (err.isAxiosError) {
+          if (err.response.status === 400) {
+            setRegistrationFailed(true);
+            navigate(routes.signupPagePath());
+          } else {
+            formik.errors.error = t('errors.network') || '';
+          }
+        } else {
+          formik.errors.error = err.message || '';
         }
       }
     },
