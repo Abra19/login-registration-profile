@@ -38,6 +38,7 @@ const AboutPage = () => {
         top: '50%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
+        marginTop: '50px',
         backgroundColor: 'aliceblue',
       }}
     >
